@@ -1,0 +1,9 @@
+docker login daocloud.io
+docker pull daocloud.io/mygcc/redis:3.2
+docker pull daocloud.io/mygcc/gcc:v4
+
+sudo apt-get update && apt-get install -y python-pip python-dev
+sudo pip install -U docker-compose
+
+sudo vi docker-compose.yml //passwd IP
+docker-compose up -d
