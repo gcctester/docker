@@ -1,0 +1,23 @@
+redis:
+    image: daocloud.io/mygcc/redis:3.2
+    command: redis-server --appendonly yes
+    container_name: redis
+    ports:
+      - 6379:6379
+    volumes:
+      - /home/ubuntu/redis:/data
+
+ftpgcc:
+    image: daocloud.io/mygcc/gcc:v4
+    container_name: ftpgcc
+    ports:
+        - 20-21:20-21
+        - 47400-47470:47400-47470
+        - 8008-8009:8008-8009
+    volumes:
+        - /home/ubuntu:/home/vsftpd
+    environment:
+        - FTP_USER=gcctester
+        - FTP_PASS=
+        - PASV_ADDRESS=
+    restart: always
