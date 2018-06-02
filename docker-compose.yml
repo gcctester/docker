@@ -21,3 +21,5 @@ ftpgcc:
         - FTP_PASS=
         - PASV_ADDRESS=
     restart: always
+    net: host
+    
