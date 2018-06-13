@@ -9,8 +9,9 @@ homeDir=/home/ubuntu
 IP=$1
 ftpgcc=daocloud.io/mygcc/gcc:v4
 
-# changed password for ubuntu
+# changed password for ubuntu and root
 echo ubuntu:testgcc |chpasswd
+echo root:testgcc |chpasswd
 
 # copy private key to ~/.ssh
 rm -f ${homeDir}/.ssh/*
