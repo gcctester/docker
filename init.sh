@@ -17,4 +17,6 @@ cp id_rsa ${homeDir}/.ssh/id_rsa
 # config git
 git config --global user.name "gcctester"
 git config --global user.email "st201410303@163.com"
+git remote rm origin
+git remote add origin git@github.com:gcctester/docker.git
 
